@@ -115,7 +115,9 @@ nav ul li a {
 }
 
 .about-us,
-.contact-us {
+.contact-us,
+.bottles,
+.jars {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
@@ -123,6 +125,12 @@ nav ul li a {
 
 .about-us p,
 .contact-us p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.bottles h2,
+.jars h2 {
     max-width: 600px;
     margin: 0 auto 20px auto;
 }
@@ -193,3 +201,7 @@ footer {
 .contact form button:hover {
     background-color: #45a049;
 }
+
+/* .bottles{
+    
+} */
