@@ -18,21 +18,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo img {
     height: 50px;
     border-radius: 50%;
-    /* Adjust height as needed */
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
@@ -44,6 +46,7 @@ nav ul li a {
 .hero {
     background-image: url('images/j2.jpg');
     background-size: cover;
+    background-position: center;
     color: #333;
     text-align: center;
     padding: 100px 20px;
@@ -78,25 +81,28 @@ nav ul li a {
     background-color: #45a049;
 }
 
+/* Product categories section */
 .product-categories {
     padding: 50px 20px;
     text-align: center;
 }
 
-.category {
+.product-categories .category {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 400px;
 }
 
-.category img {
+.product-categories .category img {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
+/* Gallery */
 .gallery {
     padding: 50px 20px;
     text-align: center;
@@ -104,8 +110,9 @@ nav ul li a {
 
 .gallery-images {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .gallery-images img {
@@ -115,9 +122,7 @@ nav ul li a {
 }
 
 .about-us,
-.contact-us,
-.bottles,
-.jars {
+.contact-us {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
@@ -129,20 +134,20 @@ nav ul li a {
     margin: 0 auto 20px auto;
 }
 
-.bottles h2,
-.jars h2 {
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer div {
+    flex: 1;
+    margin: 10px;
 }
 
 .additional-links ul {
@@ -159,25 +164,14 @@ footer {
     font-weight: bold;
 }
 
-.advertisement {
-    text-align: left;
-}
-
 .advertisement h3 {
     margin-bottom: 10px;
 }
 
-.contact {
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-}
-
 .contact form {
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -200,4 +194,39 @@ footer {
 
 .contact form button:hover {
     background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .gallery-images img {
+        max-width: 45%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .gallery-images img {
+        max-width: 100%;
+    }
 }
