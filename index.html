@@ -15,7 +15,10 @@
                 <img src="./logo/logo.png" alt="PolySite Logo">
             </a>
         </div>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav class="menu">
             <ul>
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -24,6 +27,7 @@
             </ul>
         </nav>
     </header>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -95,6 +99,17 @@
             </form>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", () => {
+                menu.classList.toggle("show");
+            });
+        });
+    </script>
 
 </body>
 
